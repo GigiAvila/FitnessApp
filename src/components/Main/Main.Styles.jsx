@@ -13,5 +13,8 @@ align-items: center;
 export const MainOutlet = styled.main`
 width: 100%;
 height: 80vh;
+display: flex;
+justify-content: space-around;
+align-items: center;
 
 `

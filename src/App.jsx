@@ -11,6 +11,7 @@ import ProfilePage from './pages/ProfilePage';
 import { themeLight, themeDark } from './Styles/theme';
 import GlobalStyles from './Styles/GlobalStyles';
 import { UserContextProvider } from './context/UserContext';
+import { RoutinesContextProvider } from './context/RoutinesContext';
 
 function App() {
   const [themeProvide, setThemeProvide] = useState(themeDark);
@@ -18,21 +19,22 @@ function App() {
   return (
     <ThemeProvider theme={themeProvide}>
       <UserContextProvider>
-        <GlobalStyles />
-        <BrowserRouter basename='/'>
-          <Routes>
-            <Route index element={<WelcomePage themeProvide={themeProvide} />} />
+        <RoutinesContextProvider>
+          <GlobalStyles />
+          <BrowserRouter basename='/'>
+            <Routes>
+              <Route index element={<WelcomePage themeProvide={themeProvide} />} />
 
-            <Route path="/" element={<Main themeProvide={themeProvide} setThemeProvide={setThemeProvide} />}>
-              <Route path="home" element={<Home />} />
-              <Route path="routines" element={<Routines />} />
-              <Route path="routine/:id" element={<Routine />} />
-              <Route path="history" element={<History />} />
-              <Route path="profile" element={<ProfilePage />} />
-            </Route>
-
-          </Routes>
-        </BrowserRouter>
+              <Route path="/" element={<Main themeProvide={themeProvide} setThemeProvide={setThemeProvide} />}>
+                <Route path="home" element={<Home />} />
+                <Route path="routines" element={<Routines />} />
+                <Route path="routine/:id" element={<Routine />} />
+                <Route path="history" element={<History />} />
+                <Route path="profile" element={<ProfilePage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </RoutinesContextProvider>
       </UserContextProvider>
     </ThemeProvider>
   );

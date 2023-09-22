@@ -5,14 +5,19 @@ import { useTheme } from '@emotion/react';
 import avatarPhoto from '../../../public/avatar.png'
 import { UserContext } from '../../context/UserContext';
 import Modal from '../Modal/Modal'
+import UserProfileForm from '../UserProfileForm/UserProfileForm';
 
 
 const ProfileCard = () => {
   const theme = useTheme();
-  const { user } = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext)
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleSaveChanges = (formData) => {
+    setUser(formData);
+    setIsOpen(false);
+  }
 
 
   return (
@@ -30,9 +35,9 @@ const ProfileCard = () => {
             </ProfileTitleContainer>
 
             <ProfileDataContainer>
-              <p>{user.age} years</p>
-              <p>{user.weight} Kg</p>
-              <p>{user.height} cm</p>
+              <p>{user.age || '-'} years</p>
+              <p>{user.weight || '-'} Kg</p>
+              <p>{user.height || '-'} cm</p>
             </ProfileDataContainer>
           </>
 
@@ -49,8 +54,11 @@ const ProfileCard = () => {
       </ProfileCardWrapper>
 
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-        <h3>Modal Text</h3>
-        <h5>prueba</h5>
+        <UserProfileForm
+          user={user}
+          onCancel={() => setIsOpen(false)}
+          onSave={handleSaveChanges}
+        />
       </Modal>
     </>
   )

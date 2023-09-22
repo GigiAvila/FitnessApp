@@ -7,24 +7,28 @@ export const BreakPoints = {
 }
 
 const lightPalette = {
-  background: '#dfe8c0',
+  background: '#f7f6f6',
   backgroundAlternative: '#a9b583',
   color: '#1d1d1c',
   titleColor: '#1d1d1c',
   ImpButtonBgColor: '#1d1d1c',
   ImpButtonColorText: '#e6e6e6',
+  SecondaryButtonBgColor: '#e6e6e6',
+  SecondaryButtonColorText: '#1d1d1c',
   border: '#1d1d1c',
-  hoverColor: '#7c7c7e',
+  hoverColor: '#e6e6e6',
   iconColor: '#1d1d1c',
 }
 
 const darkPalette = {
   background: '#1d1d1c',
   backgroundAlternative: '#333327',
-  color: '#e6e6e6',
-  titleColor: '#d2ef76',
+  color: '#f7f6f6',
+  titleColor: ' #cde186 ',
   ImpButtonBgColor: '#d2ef76',
   ImpButtonColorText: '#1d1d1c',
+  SecondaryButtonBgColor: '#e6e6e6',
+  SecondaryButtonColorText: '#1d1d1c',
   border: '#e3f3a4',
   hoverColor: '#7c7c7e',
   iconColor: '#1d1d1c',
@@ -42,6 +46,8 @@ export const themeLight = {
     border: lightPalette.border,
     hoverColor: lightPalette.hoverColor,
     iconColor: lightPalette.iconColor,
+    SecondaryButtonBgColor: lightPalette.SecondaryButtonBgColor,
+    SecondaryButtonColorText: lightPalette.SecondaryButtonColorText,
 
   },
   mediaquery: {
@@ -63,6 +69,8 @@ export const themeDark = {
     border: darkPalette.border,
     hoverColor: darkPalette.hoverColor,
     iconColor: darkPalette.iconColor,
+    SecondaryButtonBgColor: darkPalette.SecondaryButtonBgColor,
+    SecondaryButtonColorText: darkPalette.SecondaryButtonColorText,
   },
   mediaquery: {
     mobile: `@media (max-width: ${BreakPoints.tablet}px)`,

@@ -17,28 +17,13 @@ const Modal = ({ isOpen, children, setIsOpen }) => {
               color: theme.palette.color,
             }}>
             <ModalContainer style={{
-              background: theme.palette.backgroundAlternative,
+              background: theme.palette.background,
               color: theme.palette.color,
-              border: `1px solid ${theme.palette.border}`
+              border: `1px solid ${theme.palette.background}`
             }}>
-              <CloseButtonContainer onClick={() => setIsOpen(false)}>
-                <CloseIcon />
-              </CloseButtonContainer>
               <ModalTextContainer>
                 {children}
               </ModalTextContainer>
-              <CloseEditionButtonContainer>
-                <CloseEditionButton
-                  to="/profile"
-                  onClick={() => setIsOpen(false)}
-                  style={{
-                    background: theme.palette.ImpButtonBgColor,
-                    color: theme.palette.ImpButtonColorText
-                  }}>
-                  Close edition
-                </CloseEditionButton>
-              </CloseEditionButtonContainer>
-
             </ModalContainer>
           </ModalPopover>,
           document.getElementById('portal'))) : null

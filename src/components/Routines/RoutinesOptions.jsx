@@ -1,34 +1,65 @@
-import React from 'react'
-import { RoutinesOptionsWrapper, RoutineOptionContainer, RoutineOptionIcon } from './RoutinesOptions.Styles'
+import React, { useState, useContext } from 'react';
+import { RoutinesWrapper, RoutinesTitles, RoutinesOptionsWrapper } from './RoutinesOptions.Styles';
+import { RoutinesContext } from '../../context/RoutinesContext';
 
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import SportsGymnasticsIcon from '@mui/icons-material/SportsGymnastics';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
+
+import DifficultyLevel from './DifficultyLevel';
+import DefaultRoutines from './DefaultRoutines';
+import CustomRoutine from './CustomRoutine';
+import Modal from '../Modal/Modal';
+import RoutineCard from '../RoutinesForm/RoutineCard';
+import RoutinesForm from '../RoutinesForm/RoutinesForm';
+
+
 const RoutinesOptions = () => {
+  const { routines, addRoutine } = useContext(RoutinesContext);
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [routineData, setRoutineData] = useState({ ...routines });
+  const [routineDataWithType, setRoutineDataWithType] = useState(null);
+
+
+  const handleLevelSetup = (selectedLevel) => {
+    setRoutineData((prevData) => ({
+      ...prevData,
+      level: selectedLevel,
+    }));
+  }
+
+  const handleTypeRoutine = (type) => {
+    setIsOpen(true);
+    const newRoutineDatawithType = { ...routineData, type };
+    setRoutineDataWithType(type === 'Custom' ? 'Custom' : newRoutineDatawithType);
+    console.log('newRoutineDatawithType', newRoutineDatawithType);
+  };
+
+
+  const handleAddRoutine = (newRoutineData) => {
+    addRoutine(newRoutineData);
+    setIsOpen(false);
+    console.log('newRoutineData', newRoutineData);
+  };
 
   return (
-    <RoutinesOptionsWrapper>
-      <RoutineOptionContainer >
-        <FitnessCenterIcon fontSize="large" />
-        <p>Strength</p>
-      </RoutineOptionContainer>
-      <RoutineOptionContainer>
-        <FavoriteIcon fontSize="large" />
-        <p>Cardio</p>
-      </RoutineOptionContainer>
-      <RoutineOptionContainer>
-        <SportsMartialArtsIcon fontSize="large" />
-        <p>Martial Arts</p>
-      </RoutineOptionContainer>
-      <RoutineOptionContainer>
-        <SportsGymnasticsIcon fontSize="large" />
-        <p>Yoga</p>
-      </RoutineOptionContainer>
-    </RoutinesOptionsWrapper>
+    <RoutinesWrapper>
+      <RoutinesTitles>
+        <h3>Workout Categories</h3>
+      </RoutinesTitles>
+      <DifficultyLevel onLevelSetup={handleLevelSetup} />
+      <RoutinesOptionsWrapper>
+        <DefaultRoutines routineData={routineData} handleTypeRoutine={handleTypeRoutine} />
+        <CustomRoutine handleTypeRoutine={handleTypeRoutine} />
+      </RoutinesOptionsWrapper>
 
-  )
-}
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+        {routineDataWithType !== 'Custom' ? (
+          <RoutineCard onCancel={() => setIsOpen(false)} onSave={handleAddRoutine} routineDataWithType={routineDataWithType} />
+        ) : (
+          <RoutinesForm onCancel={() => setIsOpen(false)} onSave={handleAddRoutine} routineDataWithType={routineDataWithType} />
+        )}
+      </Modal>
+    </RoutinesWrapper>
+  );
+};
 
-export default RoutinesOptions
+export default RoutinesOptions;

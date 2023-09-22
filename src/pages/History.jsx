@@ -1,8 +1,12 @@
 import React from 'react'
+import HistoryCard from '../components/History/HistoryCard'
 
 const History = () => {
+
+
+
   return (
-    <div>History</div>
+    <HistoryCard />
   )
 }
 
