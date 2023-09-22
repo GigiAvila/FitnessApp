@@ -4,7 +4,6 @@ import HistoryCard from '../components/History/HistoryCard'
 const History = () => {
 
 
-
   return (
     <HistoryCard />
   )

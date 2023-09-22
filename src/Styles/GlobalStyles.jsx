@@ -11,6 +11,7 @@ const GlobalStyles = () => {
           "*": {
             fontFamily: "Bebas Neue, sans-serif",
             boxSizing: "border-box",
+            margin: 0,
           },
           "html, body": {
             padding: 0,

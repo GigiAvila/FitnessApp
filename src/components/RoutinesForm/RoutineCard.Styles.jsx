@@ -14,6 +14,7 @@ export const RoutineCardWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
 `;
 
 
@@ -26,13 +27,15 @@ export const RoutineInfoContainer = styled.div`
   overflow: hidden;
   overflow-y: auto;
   border-radius: 30px;
+  padding: 5vw;
 
   >p{
     font-size: 2.6vw;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.8;
     padding: 1vw;
     width: 90%
+    
 
   }
 
@@ -52,6 +55,7 @@ display: flex;
 align-items: center;
 justify-content: flex-start;
 gap: 3vw;
+padding: 3vw 0;
 
 `
 
@@ -81,6 +85,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 1vw;
+padding: 3vw 0;
 
 
 >button {

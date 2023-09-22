@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { RoutinesDefaultOptionsData } from '../../data/RoutinesDefaultOptionsData'
 import { RoutineCardWrapper, RountineChip, RoutineInfoContainer, RoutineTitleContainer, RoutineChips, ButtonActionsWrapper } from './RoutineCard.Styles'
 import { useTheme } from '@emotion/react';
@@ -27,9 +27,17 @@ const getBackgroundImage = (type) => {
 
 const RoutineCard = ({ onCancel, onSave, routineDataWithType }) => {
   const selectedRoutine = RoutinesDefaultOptionsData.find((routine) => routine.type === routineDataWithType.type);
+  if (selectedRoutine) {
+    selectedRoutine.level = routineDataWithType.level ? routineDataWithType.level.toLowerCase() : 'beginner';
+  }
+
+
   const theme = useTheme();
   const backgroundImage = getBackgroundImage(selectedRoutine.type);
 
+  useEffect(() => {
+    console.log('selectedRoutine', selectedRoutine)
+  })
   return (
     <>
       <RoutineCardWrapper

@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom';
 import { MainWrapper, MainOutlet } from './Main.Styles.jsx'
 
 const Main = ({ themeProvide, setThemeProvide }) => {
+
   const toggleTheme = () => {
     setThemeProvide(themeProvide === themeLight ? themeDark : themeLight);
   };

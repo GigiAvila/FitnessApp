@@ -6,12 +6,12 @@ height: auto;
 `
 
 export const WelcomeTitle = styled.h3`
-font-size: 8vw;
-padding-left: 3vw;
+font-size: 10vw;
+padding: 3vw;
 `
 
 export const WelcomeSubtitle = styled.h5`
-font-size: 4vw;
+font-size: 6vw;
 font-weight: 300;
-padding-left: 3vw;
+padding: 3vw;
 `

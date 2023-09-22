@@ -13,8 +13,12 @@ export const RoutinesContextProvider = ({ children }) => {
 
   }, [])
 
+  const removeRoutine = useCallback((routineId) => {
+    setRoutines((prevState) => prevState.filter((routine) => routine.id !== routineId))
+  }, [])
+
   return (
-    <RoutinesContext.Provider value={{ routines, addRoutine }}>
+    <RoutinesContext.Provider value={{ routines, addRoutine, removeRoutine }}>
       {children}
     </RoutinesContext.Provider>
   );
