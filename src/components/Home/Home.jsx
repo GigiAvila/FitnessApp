@@ -1,26 +1,27 @@
-import React from 'react'
-import { BackgroundImage, HomeContainer, SliderWrapper, SliderTitle, SliderContainer, SliderItem, SliderItemImg, SliderItemText } from './Home.Styles'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-
+import React, { useState } from 'react';
+import Player from './Player/Player';
+import Recomendations from './Recommendations/Recomendations';
+import { HomeContainer } from './Home.Styles'
 const Home = () => {
+
+  const [selectedRoutine, setSelectedRoutine] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen);
+  }
+
+  const handleVideoOpen = (routine) => {
+    setSelectedRoutine(routine);
+    handleIsOpen(true);
+  }
+
   return (
     <HomeContainer>
-      <BackgroundImage />
-      <ArrowBackIosIcon style={{
-        color: '#ffffff',
-        position: 'fixed',
-        top: '20px',
-        left: '20px',
-      }} />
-      <SliderWrapper>
-        <SliderTitle>Recommended</SliderTitle>
-        <SliderContainer>
-          <SliderItem>
-            <SliderItemImg src="" alt="sliderItemImg" />
-            <SliderItemText>Slider item text</SliderItemText>
-          </SliderItem>
-        </SliderContainer>
-      </SliderWrapper>
+
+      {isOpen ? (<Player handleIsOpen={handleIsOpen} selectedRoutine={selectedRoutine} />) : <Recomendations onVideoOpen={handleVideoOpen} />}
+
+
     </HomeContainer>
   );
 }

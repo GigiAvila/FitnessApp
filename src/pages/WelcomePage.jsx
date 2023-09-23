@@ -1,7 +1,7 @@
 import React from 'react'
-import WelcomeButton from '../components/WelcomeButton/WelcomeButton'
-import WelcomeTitles from '../components/WelcomeTitles/WelcomeTitles'
-import WelcomeVideo from '../components/WelcomeVideo/WelcomeVideo'
+import WelcomeButton from '../components/Welcome/WelcomeButton/WelcomeButton'
+import WelcomeTitles from '../components/Welcome/WelcomeTitles/WelcomeTitles'
+import WelcomeVideo from '../components/Welcome/WelcomeVideo/WelcomeVideo'
 import { WelcomePageWrapper } from './WelcomePage.Styles'
 
 const WelcomePage = ({ themeProvide }) => {

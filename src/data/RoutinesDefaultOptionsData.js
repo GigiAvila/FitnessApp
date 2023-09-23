@@ -4,11 +4,12 @@ import StrengthImage from '../../public/Strength.jpg'
 import CardioImage from '../../public/Cardio.jpg'
 import YogaImage from '../../public/yoga.jpg'
 import MartialArtsImage from '../../public/martialArts.jpg'
-
+import Video1 from '../../public/WelcomeVideo.mp4'
+import Video2 from '../../public/WelcomeVideo1.mp4'
 
 
 export const RoutinesDefaultOptionsData = [{
-  id: "",
+  id: "01",
   title: 'Full Body Strength',
   type: 'Strength',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -21,12 +22,20 @@ export const RoutinesDefaultOptionsData = [{
       name: "",
       series: 0,
       repetitions: 0,
+      video: Video2,
+    },
+    {
+      id: "",
+      name: "",
+      series: 0,
+      repetitions: 0,
+      video: Video1,
     }
   ]
 
 },
 {
-  id: "",
+  id: "02",
   title: 'Cardio',
   type: 'Cardio',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -39,11 +48,19 @@ export const RoutinesDefaultOptionsData = [{
       name: "",
       series: 0,
       repetitions: 0,
+      video: Video1,
+    },
+    {
+      id: "",
+      name: "",
+      series: 0,
+      repetitions: 0,
+      video: Video2,
     }
   ]
 },
 {
-  id: "",
+  id: "03",
   title: 'Martial Arts',
   type: 'Martial Arts',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
@@ -56,11 +73,19 @@ export const RoutinesDefaultOptionsData = [{
       name: "",
       series: 0,
       repetitions: 0,
+      video: Video1,
+    },
+    {
+      id: "",
+      name: "",
+      series: 0,
+      repetitions: 0,
+      video: Video2,
     }
   ]
 },
 {
-  id: "",
+  id: "04",
   title: 'Yoga',
   type: 'Yoga',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
@@ -73,6 +98,14 @@ export const RoutinesDefaultOptionsData = [{
       name: "",
       series: 0,
       repetitions: 0,
+      video: Video1,
+    },
+    {
+      id: "",
+      name: "",
+      series: 0,
+      repetitions: 0,
+      video: Video2,
     }
   ]
 },

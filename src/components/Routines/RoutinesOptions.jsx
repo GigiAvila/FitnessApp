@@ -3,11 +3,11 @@ import { RoutinesWrapper, RoutinesTitles, RoutinesOptionsWrapper } from './Routi
 import { RoutinesContext } from '../../context/RoutinesContext';
 
 
-import DifficultyLevel from './DifficultyLevel';
-import DefaultRoutines from './DefaultRoutines';
-import CustomRoutine from './CustomRoutine';
+import DifficultyLevel from './DifficultyLevel/DifficultyLevel';
+import DefaultRoutines from '../Routines/DefaultRoutine/DefaultRoutines';
+import CustomRoutine from '../Routines/CustomRoutine/CustomRoutine';
 import Modal from '../Modal/Modal';
-import RoutineCard from '../RoutinesForm/RoutineCard';
+import RoutineCard from '../RoutineCard/RoutineCard';
 import RoutinesForm from '../RoutinesForm/RoutinesForm';
 
 

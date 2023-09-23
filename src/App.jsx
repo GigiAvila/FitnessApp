@@ -13,6 +13,7 @@ import GlobalStyles from './Styles/GlobalStyles';
 import { UserContextProvider } from './context/UserContext';
 import { RoutinesContextProvider } from './context/RoutinesContext';
 
+
 function App() {
   const [themeProvide, setThemeProvide] = useState(themeDark);
 

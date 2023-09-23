@@ -13,6 +13,7 @@ export const RoutinesData = [{
       name: "",
       series: 0,
       repetitions: 0,
+      video: "",
     }
   ]
 

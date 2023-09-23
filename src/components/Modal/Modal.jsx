@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CloseIcon from '@mui/icons-material/Close';
 import { ModalPopover, ModalContainer, CloseButtonContainer, ModalTextContainer, CloseEditionButtonContainer, CloseEditionButton } from './Modal.styles';
 import { useTheme } from '@emotion/react';
 

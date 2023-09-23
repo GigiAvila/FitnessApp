@@ -17,7 +17,7 @@ const lightPalette = {
   SecondaryButtonColorText: '#1d1d1c',
   border: '#1d1d1c',
   hoverColor: '#e6e6e6',
-  iconColor: '#1d1d1c',
+
 }
 
 const darkPalette = {
@@ -31,7 +31,7 @@ const darkPalette = {
   SecondaryButtonColorText: '#1d1d1c',
   border: '#e3f3a4',
   hoverColor: '#7c7c7e',
-  iconColor: '#1d1d1c',
+
 
 }
 
