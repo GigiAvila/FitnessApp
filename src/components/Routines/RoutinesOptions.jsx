@@ -7,13 +7,13 @@ import DifficultyLevel from './DifficultyLevel/DifficultyLevel';
 import DefaultRoutines from '../Routines/DefaultRoutine/DefaultRoutines';
 import CustomRoutine from '../Routines/CustomRoutine/CustomRoutine';
 import Modal from '../Modal/Modal';
-import RoutineCard from '../RoutineCard/RoutineCard';
+import RoutineCard from './RoutineCard/RoutineCard';
 import RoutinesForm from '../RoutinesForm/RoutinesForm';
 
 
 const RoutinesOptions = () => {
   const { routines, addRoutine } = useContext(RoutinesContext);
-
+  const [openPlayer, setOpenPlayer] = useState(false)
   const [isOpen, setIsOpen] = useState(false);
   const [routineData, setRoutineData] = useState({ ...routines });
   const [routineDataWithType, setRoutineDataWithType] = useState(null);
@@ -36,7 +36,7 @@ const RoutinesOptions = () => {
 
   const handleAddRoutine = (newRoutineData) => {
     addRoutine(newRoutineData);
-    setIsOpen(false);
+    setOpenPlayer(true);
     console.log('newRoutineData', newRoutineData);
   };
 
@@ -53,7 +53,7 @@ const RoutinesOptions = () => {
 
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
         {routineDataWithType !== 'Custom' ? (
-          <RoutineCard onCancel={() => setIsOpen(false)} onSave={handleAddRoutine} routineDataWithType={routineDataWithType} />
+          <RoutineCard onCancel={() => setIsOpen(false)} onSave={handleAddRoutine} routineDataWithType={routineDataWithType} openPlayer={openPlayer} />
         ) : (
           <RoutinesForm onCancel={() => setIsOpen(false)} onSave={handleAddRoutine} routineDataWithType={routineDataWithType} />
         )}

@@ -19,16 +19,16 @@ export const RoutinesDefaultOptionsData = [{
   exercises: [
     {
       id: "",
-      name: "",
-      series: 0,
-      repetitions: 0,
+      name: "Legs",
+      series: 3,
+      repetitions: 10,
       video: Video2,
     },
     {
       id: "",
-      name: "",
-      series: 0,
-      repetitions: 0,
+      name: "Abs",
+      series: 5,
+      repetitions: 5,
       video: Video1,
     }
   ]

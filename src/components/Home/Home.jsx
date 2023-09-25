@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Player from './Player/Player';
 import Recomendations from './Recommendations/Recomendations';
 import { HomeContainer } from './Home.Styles'
+
 const Home = () => {
 
   const [selectedRoutine, setSelectedRoutine] = useState(null);

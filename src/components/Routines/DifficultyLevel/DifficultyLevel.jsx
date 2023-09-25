@@ -11,6 +11,7 @@ const DifficultyLevel = ({ onLevelSetup }) => {
   const handleLevelClick = (selectedLevel) => {
     setSelectedLevel(selectedLevel);
     onLevelSetup(selectedLevel);
+    
 
   };
 

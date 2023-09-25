@@ -1,15 +1,14 @@
 import React from 'react';
 import { BackgroundImage, SliderItemTextsContainer, SliderItemInfoContainer, SliderItemTextContainer, SliderWrapper, SliderTitle, SliderItemTitle, SliderContainer, SliderItem, SliderItemText } from './Recomendations.Styles';
-
 import { RoutinesDefaultOptionsData } from '../../../data/RoutinesDefaultOptionsData';
 import { useTheme } from '@emotion/react';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 
+
 const Recomendations = ({ onVideoOpen }) => {
   const theme = useTheme();
-
 
   return (
     <>
