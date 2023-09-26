@@ -21,7 +21,7 @@ export const RoutineCardWrapper = styled.div`
 export const RoutineInfoContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 74vh;
+  height: 72vh;
   z-index: 1;
   padding-left: 2vw;
   overflow: hidden;
@@ -46,7 +46,7 @@ width: 100%;
 height: auto;
 
 > h4 {
-  font-size: 6vw;
+  font-size: 5vw;
 }`;
 
 export const RoutineChips = styled.div`
@@ -84,19 +84,20 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-gap: 1vw;
+gap: 1.2vw;
 padding: 1vw 0;
+
 
 
 >button {
   width: 40%;
   padding: 0.5rem;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  font-size: 3vw;
+  font-size: 2.8vw;
   font-weight: bold;
 }`;
 

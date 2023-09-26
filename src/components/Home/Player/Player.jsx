@@ -75,7 +75,7 @@ function Player({ handleIsOpen, selectedRoutine }) {
                 color: theme.palette.background,
               }}
             >
-              Go back to Home 🏠
+              Go back
             </Tooltip>
           )}
           <h2>{selectedRoutine.title}</h2>

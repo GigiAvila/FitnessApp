@@ -22,7 +22,7 @@ width: 100%;
 height: 28vh;
 display:flex;
 flex-direction: column;
-gap: 2vw;
+gap: 1.5vw;
 overflow: hidden;
 overflow-y: auto;
 padding-right: 5vw;
@@ -39,7 +39,7 @@ object-fit: contain;
 
 
 > video {
-  width: 55%;
+  width: 50%;
   height: auto;
   border-radius: 0 15px 15px 0;
 }
@@ -70,9 +70,9 @@ gap: 2vw;
 `
 
 export const ExerciseTitle = styled.div`
-font-size: 4vw;
+font-size: 3vw;
 font-weight: bold;
-line-height: 2
+line-height: 1.8
 `;
 
 export const ExerciseText = styled.div`

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RoutinesDefaultOptionsData } from '../../../data/RoutinesDefaultOptionsData'
 import { RoutineCardWrapper, RountineChip, RoutineInfoContainer, RoutineTitleContainer, RoutineChips, ButtonActionsWrapper } from './RoutineCard.Styles'
 import { useTheme } from '@emotion/react';
@@ -27,9 +27,14 @@ const getBackgroundImage = (type) => {
   }
 };
 
-const RoutineCard = ({ onCancel, onSave, routineDataWithType, openPlayer }) => {
+const RoutineCard = ({ onCancel, onSave, routineDataWithType, openPlayer, setOpenPlayer }) => {
 
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleIsOpen = () => {
+    setOpenPlayer(false);
+
+  }
 
 
   const selectedRoutine = RoutinesDefaultOptionsData.find((routine) => routine.type === routineDataWithType.type);
@@ -120,7 +125,7 @@ const RoutineCard = ({ onCancel, onSave, routineDataWithType, openPlayer }) => {
           </ButtonActionsWrapper>
         </RoutineInfoContainer>
       </RoutineCardWrapper>
-      {openPlayer ? (<Player selectedRoutine={selectedRoutine} />) : null}
+      {openPlayer ? (<Player selectedRoutine={selectedRoutine} handleIsOpen={handleIsOpen} />) : null}
 
     </>
   );

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const Form = styled.form`
 width: 100%;
 height: auto;
-padding: 2vw;
+padding: 1vw;
 display: flex;
 flex-direction: column;
 align-items: center;

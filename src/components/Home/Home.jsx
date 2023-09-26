@@ -3,6 +3,7 @@ import Player from './Player/Player';
 import Recomendations from './Recommendations/Recomendations';
 import { HomeContainer } from './Home.Styles'
 
+
 const Home = () => {
 
   const [selectedRoutine, setSelectedRoutine] = useState(null);
@@ -10,6 +11,7 @@ const Home = () => {
 
   const handleIsOpen = () => {
     setIsOpen(!isOpen);
+
   }
 
   const handleVideoOpen = (routine) => {

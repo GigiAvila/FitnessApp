@@ -30,14 +30,20 @@ const RoutinesOptions = () => {
     setIsOpen(true);
     const newRoutineDatawithType = { ...routineData, type };
     setRoutineDataWithType(type === 'Custom' ? 'Custom' : newRoutineDatawithType);
-    console.log('newRoutineDatawithType', newRoutineDatawithType);
+
   };
 
 
-  const handleAddRoutine = (newRoutineData) => {
+  const handleCustomAddRoutine = (newRoutineData) => {
     addRoutine(newRoutineData);
     setOpenPlayer(true);
-    console.log('newRoutineData', newRoutineData);
+
+  };
+
+  const handleDefaultAddRoutine = (newRoutineData) => {
+    setOpenPlayer(true);
+
+
   };
 
   return (
@@ -53,9 +59,9 @@ const RoutinesOptions = () => {
 
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
         {routineDataWithType !== 'Custom' ? (
-          <RoutineCard onCancel={() => setIsOpen(false)} onSave={handleAddRoutine} routineDataWithType={routineDataWithType} openPlayer={openPlayer} />
+          <RoutineCard onCancel={() => setIsOpen(false)} onSave={handleDefaultAddRoutine} routineDataWithType={routineDataWithType} openPlayer={openPlayer} setOpenPlayer={setOpenPlayer} />
         ) : (
-          <RoutinesForm onCancel={() => setIsOpen(false)} onSave={handleAddRoutine} routineDataWithType={routineDataWithType} />
+          <RoutinesForm onCancel={() => setIsOpen(false)} onSave={handleCustomAddRoutine} routineDataWithType={routineDataWithType} />
         )}
       </Modal>
     </RoutinesWrapper>

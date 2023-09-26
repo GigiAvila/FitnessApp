@@ -15,7 +15,7 @@ align-items: center;
 
 
 export const ModalContainer = styled.div`
-min-width: 90vw;
+min-width: 92vw;
 max-width: 100vw;
 height: auto;
 min-height: 75vh;
