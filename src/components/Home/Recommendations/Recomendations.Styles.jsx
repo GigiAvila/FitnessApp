@@ -12,6 +12,10 @@ export const HomeContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   position: relative; 
+
+  @media (min-width: 768px) {
+    
+  }
 `;
 
 
@@ -27,6 +31,8 @@ export const BackgroundImage = styled.div`
   filter: blur(3px); 
   z-index: 0; 
 
+  
+
 `;
 
 export const SliderWrapper = styled.div`
@@ -41,6 +47,7 @@ export const SliderTitle = styled.h3`
   padding: 2vw;
   font-size: 6vw;
   color: #1d1d1c;
+
 `;
 
 export const SliderContainer = styled.div`
@@ -54,6 +61,8 @@ export const SliderContainer = styled.div`
   overflow: hidden;
   overflow-x: auto;
   gap: 5vw;
+
+
 `;
 
 export const SliderItem = styled.div`
@@ -78,6 +87,8 @@ export const SliderItem = styled.div`
     height: 100%;
     z-index: 1; 
   }
+
+ 
 `;
 
 
@@ -93,6 +104,8 @@ margin-bottom: 1vw;`
 export const SliderItemTitle = styled.h3`
 font-size: 5vw;
 padding-left: 2vw;
+
+
 `
 
 export const SliderItemInfoContainer = styled.div`
