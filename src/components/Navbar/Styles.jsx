@@ -1,12 +1,13 @@
-import styled from "styled-components";
-import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
-
+import styled from 'styled-components'
+import { Link } from 'react-router-dom' // Importa Link desde react-router-dom
 
 export const NavWrapper = styled.div`
-width: 100%;
-height: 10vh;
-display: flex;
-justify-content: center;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
 `
 
 export const Nav = styled.nav`
@@ -18,17 +19,14 @@ export const Nav = styled.nav`
   border-radius: 4px;
   position: absolute;
   bottom: 10px;
-`;
+`
 
-export const NavLink = styled(Link)` 
-  text-decoration: none; 
+export const NavLink = styled(Link)`
+  text-decoration: none;
   display: flex;
   align-items: center;
 
   svg {
-   font-size: 6vw;
-
-  
+    font-size: 6vw;
   }
-`;
-
+`
