@@ -1,13 +1,11 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom' // Importa Link desde react-router-dom
+import { Link } from 'react-router-dom'
 
 export const NavWrapper = styled.div`
   width: 100%;
   height: 10vh;
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
 `
 
 export const Nav = styled.nav`
