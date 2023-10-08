@@ -31,6 +31,7 @@ export const HistoryCardContainer = styled.div`
 
 export const HistoryTitle = styled.h2`
   font-size: 6vw;
+  padding: 1vw;
 
   @media (min-width: 768px) {
     font-size: 2vw;

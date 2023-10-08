@@ -5,8 +5,9 @@ export const MainWrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  padding: 1vw;
 `
 
 export const MainOutlet = styled.main`
@@ -14,5 +15,5 @@ export const MainOutlet = styled.main`
   height: 80vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 `

@@ -1,10 +1,10 @@
 import React from 'react'
 import { HeaderWrapper, Title } from './Header.Styles'
 
-const Header = ({ themeProvide }) => {
+const Header = () => {
   return (
     <HeaderWrapper>
-      <Title style={{ color: themeProvide.palette.titleColor }}>MEGA FIT</Title>
+      <Title>MEGA FIT</Title>
     </HeaderWrapper>
   )
 }

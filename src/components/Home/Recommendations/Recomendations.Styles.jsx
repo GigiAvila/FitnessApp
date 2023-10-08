@@ -1,20 +1,10 @@
 import styled from 'styled-components'
 import HomePhoto from '../../../../public/homephoto1.png'
 
-export const HomeContainer = styled.div`
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-`
-
 export const BackgroundImage = styled.div`
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-image: url(${HomePhoto});
@@ -33,7 +23,6 @@ export const SliderWrapper = styled.div`
   width: 90%;
   height: 40vh;
   z-index: 1;
-  margin-bottom: 10vh;
 
   @media (min-width: 768px) {
     height: 60vh;
