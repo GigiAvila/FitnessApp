@@ -1,34 +1,33 @@
-import { Global } from '@emotion/react';
+import { Global } from '@emotion/react'
 
 const GlobalStyles = () => {
   return (
     <Global
       styles={(theme) => [
         {
-          "@import":
+          '@import':
             'url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@200&family=Nunito&family=Shadows+Into+Light&display=swap");',
 
-          "*": {
-            fontFamily: "Bebas Neue, sans-serif",
-            boxSizing: "border-box",
-            margin: 0,
+          '*': {
+            fontFamily: 'Bebas Neue, sans-serif',
+            boxSizing: 'border-box',
+            margin: 0
           },
-          "html, body": {
+          'html, body, #root': {
             padding: 0,
             margin: 0,
+            height: '100vh',
             color: theme.palette.color,
-            backgroundColor: theme.palette.background,
+            backgroundColor: theme.palette.background
           },
           a: {
-            color: "inherit",
-            textDecoration: "none",
+            color: 'inherit',
+            textDecoration: 'none'
           }
-
-        },
-
+        }
       ]}
     />
-  );
-};
+  )
+}
 
-export default GlobalStyles;
+export default GlobalStyles

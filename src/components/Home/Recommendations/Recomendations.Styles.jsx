@@ -3,7 +3,7 @@ import HomePhoto from '../../../../public/homephoto1.png'
 
 export const HomeContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -13,7 +13,7 @@ export const HomeContainer = styled.div`
 
 export const BackgroundImage = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
