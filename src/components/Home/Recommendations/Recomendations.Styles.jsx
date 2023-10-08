@@ -24,8 +24,8 @@ export const BackgroundImage = styled.div`
   z-index: 0;
 
   @media (min-width: 768px) {
-    width: 50%;
-    left: 25%;
+    width: 60%;
+    left: 20%;
   }
 `
 
@@ -53,18 +53,28 @@ export const SliderTitle = styled.h3`
 
 export const SliderContainer = styled.div`
   width: 100%;
-  height: 28vh;
+  height: 30vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   padding-left: 2vw;
+  gap: 5vw;
   overflow: hidden;
   overflow-x: auto;
-  gap: 5vw;
+
+  &::-webkit-scrollbar {
+    height: 0.5vw;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
 
   @media (min-width: 768px) {
-    height: 40vh;
+    height: 42vh;
   }
 `
 

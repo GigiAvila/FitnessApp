@@ -1,7 +1,7 @@
 import React from 'react'
 import { WELCOME_TITLE, WELCOME_SUBTITLE } from '../../../data/WelcomeTexts'
 import { WelcomeTitleContainer, WelcomeTitle, WelcomeSubtitle } from './Styles'
-
+import './Styles'
 const WelcomeTitles = () => {
   return (
     <WelcomeTitleContainer>

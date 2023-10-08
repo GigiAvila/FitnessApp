@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { themeLight, themeDark } from '../../../Styles/theme';
-
+import styled from 'styled-components'
+import { themeLight, themeDark } from '../../../Styles/theme'
 
 export const WelcomeWrapper = styled.div`
   position: relative;
@@ -11,12 +10,16 @@ export const WelcomeWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-`;
+
+  @media (min-width: 768px) {
+    width: 50vw;
+  }
+`
 
 export const WelcomeVideoWrapper = styled.video`
   width: auto;
   height: 100%;
-`;
+`
 
 export const Mask = styled.div`
   position: absolute;
@@ -27,7 +30,9 @@ export const Mask = styled.div`
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    ${({ themeProvide }) => (themeProvide === themeDark ? "#1d1d1c" : "#e6e6e6")} 100%
+    ${({ themeProvide }) =>
+        themeProvide === themeDark ? '#1d1d1c' : '#e6e6e6'}
+      100%
   );
   pointer-events: none;
-`;
+`

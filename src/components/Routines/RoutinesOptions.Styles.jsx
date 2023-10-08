@@ -43,73 +43,17 @@ export const RoutinesOptionsWrapper = styled.div`
   gap: 2vw;
   padding: 2vw;
   overflow-y: auto;
-`
 
-export const RoutineOptionContainer = styled.div`
-  width: 90%;
-  min-height: 27vh;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: hidden;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media (min-width: 768px) {
-    width: 100%;
-    min-height: 40vh;
+  &::-webkit-scrollbar {
+    width: 0.1em;
   }
 
-  &:hover {
-    background-size: 110%;
-    transition: all 0.5s ease;
-  }
-`
-
-export const RoutineOptionTitles = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1vw;
-  padding: 1.2vw;
-  position: relative;
-
-  @media (min-width: 768px) {
-    padding: 0.5vw;
+  &::-webkit-scrollbar-track {
+    background: transparent;
   }
 
-  > h5 {
-    font-size: 4vw;
-    margin: 0;
-    padding: 0.5vw;
-
-    @media (min-width: 768px) {
-      font-size: 1.2vw;
-      padding: 0.3vw;
-    }
-  }
-
-  > p {
-    font-size: 3vw;
-    margin: 0;
-
-    @media (min-width: 768px) {
-      font-size: 1vw;
-    }
-  }
-`
-
-export const Level = styled.span`
-  font-size: 3.2vw;
-  text-align: center;
-
-  @media (min-width: 768px) {
-    font-size: 1.2vw;
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: none;
   }
 `

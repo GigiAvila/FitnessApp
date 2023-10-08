@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import ReactPlayer from 'react-player'
-import { VideoPopover, Tooltip } from './Player.Styles'
+import { VideoPopover, Tooltip, TitleContainer } from './Player.Styles'
 import ReactDOM from 'react-dom'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import { useTheme } from '@emotion/react'
@@ -73,11 +73,14 @@ function Player({ handleIsOpen, selectedRoutine }) {
               Go back
             </Tooltip>
           )}
-          <h2>{selectedRoutine.title}</h2>
-          <h5>{selectedRoutine.type}</h5>
+          <TitleContainer>
+            <h2>{selectedRoutine.title}</h2>
+            <h5>{selectedRoutine.type}</h5>
+          </TitleContainer>
+
           <ReactPlayer
             url={selectedRoutine.exercises[currentVideoIndex].video}
-            width='90%'
+            width={window.innerWidth < 768 ? '90vw' : '40vw'}
             height='auto'
             controls={true}
             playsInline={true}
